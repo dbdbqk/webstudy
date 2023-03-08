@@ -143,10 +143,15 @@
             
             for(let i = 0; i < chkOneList.length; i++) {
                 chkOneList[i].onclick = function(){
-                    
+                    let chkCount = 0;
+                    for(let j = 0; j < chkOneList.length; j++) {
+                        chkCount += chkOneList[j].checked;
+                    }
+                    chkAll.checked = (chkOneList.length == chkCount);
+                    }
               
                 }
-            }
+            
 
 
         </script>
